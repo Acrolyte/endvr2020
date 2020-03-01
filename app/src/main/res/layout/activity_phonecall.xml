@@ -5,6 +5,6 @@
 
     <EditText android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_marginTop="200dp" android:layout_alignParentTop="true" android:layout_alignParentStart="true" android:inputType="phone" android:id="@+id/edit_text_number"/>
 
-    <ImageView android:layout_height="80dp" android:layout_width="80dp" android:id="@+id/image_call" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:src="@drawable/galaxy"/>
+    <ImageView android:layout_height="80dp" android:layout_width="80dp" android:id="@+id/image_call" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:src="@drawable/call"/>
 
 </RelativeLayout>

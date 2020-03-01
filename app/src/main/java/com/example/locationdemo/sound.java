@@ -12,12 +12,12 @@ public class sound extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sound);
+        setContentView(R.layout.activity_main);
 
         final MediaPlayer catSoundMP = MediaPlayer.create(this,R.raw.cool);
             catSoundMP.setLooping(true);
 
-        Button play = (Button) this.findViewById(R.id.soundbutton);
+        Button play = (Button) this.findViewById(R.id.button2);
 
         play.setOnClickListener(new View.OnClickListener() {
             @Override

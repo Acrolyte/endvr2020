@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -16,6 +17,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button=(Button)findViewById(R.id.button);
+        Button button1=(Button)findViewById(R.id.button1);
+        Button button2=(Button)findViewById(R.id.button2);
+        Button button3=(Button)findViewById(R.id.button3);
+
+
+
 
         locationManager=(LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
 
@@ -71,15 +80,34 @@ public class MainActivity extends AppCompatActivity {
         else {
             locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
        }
-        b=(Button)findViewById(R.id.button);
-        b.setOnClickListener(new View.OnClickListener() {
+
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(MainActivity.this,phonecall
-                        .class);
+                Intent intent=new Intent(MainActivity.this,phonecall.class);
                 startActivity(intent);
             }
         });
-
+        button1.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Mapshy.class));
+            }
+        }));
+        button3.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,sms.class));
+            }
+        }));
+        button2.setOnClickListener((new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,sound.class));
+            }
+        }));
     }
-}
+
+
+        }
+
